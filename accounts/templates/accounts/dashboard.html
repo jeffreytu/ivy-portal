@@ -53,7 +53,7 @@
 					<th>Remove</th>
 				</tr>
 
-				{% for order in orders %}
+				{% for order in orders|slice:":5" reversed %}
 					<tr>
 						<td>{{ order.product }}</td>
 						<td>{{ order.date_created }}</td>
