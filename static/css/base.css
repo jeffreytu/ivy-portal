@@ -13,3 +13,14 @@ body {
 #orders-pending {
     background-color: #7CD1C0;
 }
+
+
+.card-head {
+    padding-bottom: 15px;
+}
+.card-head div {
+    display:inline-block;
+}
+.card-head div:nth-child(2) {
+    float:right;
+}
