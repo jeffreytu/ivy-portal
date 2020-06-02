@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'django_filters',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -100,3 +101,14 @@ DATABASES = {
         'PORT': config('DB_PORT'),
     }
 }
+
+# AWS
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_KEY')
+AWS_STORAGE_BUCKET_NAME = config('AWS_BUCKET_NAME')
+
+# Django Storage
+AWS_S3_FILE_OVERWRITE = config('AWS_OVERWRITE')
+AWS_DEFAULT_ACL = config('AWS_ACL')
+DEFAULT_FILE_STORAGE = config('DEFAULT_STORAGE')
+STATICFILES_STORAGE = config('STATICFILES_STORAGE')
